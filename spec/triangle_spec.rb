@@ -10,7 +10,7 @@ describe('#triangle_finder') do
     triangle = Triangle.new(8,8,8)
   expect(triangle.triangle_finder).to(eq("Equilateral Triangle Dummy"))
   end
-  it ("returns not a triangle when all 2 sides are equal") do
+  it ("returns Isosceles triangle when two sides are equal") do
     triangle = Triangle.new(8,6,6)
   expect(triangle.triangle_finder).to(eq("Isosceles Triangle Dummy"))
   end
