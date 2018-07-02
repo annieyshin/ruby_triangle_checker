@@ -10,6 +10,8 @@ class Triangle
       "Not a Triangle dummy"
     elsif @side_one == @side_two && @side_two == @side_three
       "Equilateral Triangle Dummy"
+    elsif @side_one == @side_two || @side_one == @side_three || @side_three == @side_two
+      "Isosceles Triangle Dummy"
 
     end
 
