@@ -5,15 +5,16 @@ require('./lib/triangle')
 require('pry')
 
 get ('/')do
-  @description = "Triangle Finder"
+
   erb(:input)
 end
 get ('/output')do
-  side_one = params.fetch("side_one")
-  side_two = params.fetch("side_two")
-  side_three = params.fetch("side_three")
+  # @first_side = @side_one
+  @side_one = params.fetch("side_one").to_i
+  @side_two = params.fetch("side_two").to_i
+  @side_three = params.fetch("side_three").to_i
 
-triangle = Triangle.new(side_one, side_two, side_three)
-@is_it_a_triangle = triangle.triangle_finder()
+triangle = Triangle.new(@side_one, @side_two, @side_three)
+  @is_it_a_triangle = triangle.triangle_finder()
   erb(:output)
 end

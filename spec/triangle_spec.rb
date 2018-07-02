@@ -14,4 +14,8 @@ describe('#triangle_finder') do
     triangle = Triangle.new(8,6,6)
   expect(triangle.triangle_finder).to(eq("Isosceles Triangle Dummy"))
   end
+  it ("returns scalene triangle when no sides are equal") do
+    triangle = Triangle.new(8,6,9)
+  expect(triangle.triangle_finder).to(eq("Scalene Triangle Dummy"))
+  end
 end
