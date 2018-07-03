@@ -8,7 +8,7 @@ get ('/')do
 
   erb(:input)
 end
-get ('/output')do
+post ('/output')do
   # @first_side = @side_one
   @side_one = params.fetch("side_one").to_i
   @side_two = params.fetch("side_two").to_i
